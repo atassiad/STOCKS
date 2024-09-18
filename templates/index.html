@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <table class="table table-striped">
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>TOTAL</th>
+        </tr>
+        {% for purchase in purchases %}
+            <tr>
+                <td> {{ purchase.symbol }}</td>
+                <td> {{ purchase.symbol }}</td>
+                <td> {{ purchase.shares }}</td>
+                <td> {{ purchase.price | usd }}</td>
+                <td> {{ purchase.total | usd }}</td>
+            </tr>
+        {% endfor %}
+        <tfoot>
+            <tr>
+                <td>Cash</td>
+                {% for user in users %}
+                    <td> {{ user.cash | usd }}</td>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td> {{ totalcash | usd }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}
