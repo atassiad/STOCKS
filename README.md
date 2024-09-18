@@ -16,4 +16,4 @@ Tech Stack:
 - API Integration: IEX Cloud Financial Data API
 - Frontend: HTML, CSS, Bootstrap
 
-NOTE*: IEX Financial API is outdated and has moved to YAHOO, proper execution of website may requiere API adjustments to yahoo finance API.
+NOTE*: Integration with IEX Financial API may be outdated since original date of creation.
